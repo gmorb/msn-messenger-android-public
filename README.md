@@ -11,6 +11,8 @@
 ![Languages](https://img.shields.io/badge/i18n-EN%20%7C%20ES%20%7C%20FR-F2A900)
 ![Assets](https://img.shields.io/badge/assets-bring%20your%20own%20installer-0A64AD)
 
+<a href="https://www.buymeacoffee.com/Gmorb" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" height="45"></a>
+
 </div>
 
 ---
@@ -151,6 +153,14 @@ These plain-text markers keep the app compatible with other clients such as Elem
 | Nudge | `*nudge*` |
 | Voice clip | `m.audio` with voice-message metadata |
 | Status and personal message | `status_msg` = `[Busy] message` (Online sends the message only) |
+
+## Support the project
+
+MSN Messenger 8 for Android is free and built in my spare time. If you enjoy it, a coffee helps cover the costs of maintaining it, such as the **Claude API usage** behind the reverse engineering, bug fixes and new features, and the **time** I spend testing and improving the app.
+
+<a href="https://www.buymeacoffee.com/Gmorb" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" height="45"></a>
+
+Every donation is appreciated, and the app will always stay free. Thank you!
 
 ## Credits and licences
 
