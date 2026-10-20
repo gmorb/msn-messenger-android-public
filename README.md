@@ -105,17 +105,17 @@ You need the Android SDK, **NDK 26.3.11579264** and **CMake 3.22.1** (for the na
 ```bash
 # Android SDK path in local.properties (not committed)
 echo "sdk.dir=$HOME/Android/Sdk" > local.properties
-./gradlew assembleDebug -PnoServer
+./gradlew assembleDebug -PnoAssets -PnoServer
 # output: app/build/outputs/apk/debug/app-debug.apk
 ```
 
 Install it with `adb install -r app/build/outputs/apk/debug/app-debug.apk`.
 
-`-PnoServer` builds the asset-free version with placeholders and an empty server field. GitHub release APKs are always built this way.
+`-PnoAssets` builds the asset-free version with blank placeholders, which the importer fills from your installer. `-PnoServer` leaves the sign-in server field empty. GitHub release APKs are always built with both switches.
 
 ### Default server (optional)
 
-To pre-fill the sign-in server in your own builds, add this line to the git-ignored `local.properties` and build without `-PnoServer`:
+To pre-fill the sign-in server in your own builds, add this line to the git-ignored `local.properties` and build without `-PnoServer` (keep `-PnoAssets`):
 
 ```
 msn.server=https://matrix.example.org
