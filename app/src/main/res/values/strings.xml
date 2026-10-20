@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MSN Messenger</string>
+    <string name="hint_user">Username</string>
+    <string name="nudge">Nudge</string>
+    <string name="send">Send</string>
+    <string name="search">Search</string>
+    <string name="login_email">E-mail address:</string>
+    <string name="login_password">Password:</string>
+    <string name="login_status">Status:</string>
+    <string name="login_status_value">Online  ▾</string>
+    <string name="login_server">Server:</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="remember_password">Remember my Password</string>
+    <string name="sign_in_auto">Sign me in automatically</string>
+    <string name="sign_in">Sign In</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="service_status">Service Status</string>
+    <string name="demo_sign_in">Sign in to demo (no account)</string>
+    <string name="sign_out">Sign out</string>
+    <string name="me">Me</string>
+    <string name="my_status_value">" (Online) ▾"</string>
+    <string name="psm_placeholder">&lt;Type a personal message&gt;</string>
+    <string name="find_contact">Find a contact...</string>
+    <string name="start_conversation">Start a conversation</string>
+</resources>

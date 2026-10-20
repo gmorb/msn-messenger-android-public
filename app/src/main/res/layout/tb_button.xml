@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical"
+    android:gravity="center_horizontal" android:background="@drawable/bg_row" android:minWidth="58dp"
+    android:paddingLeft="4dp" android:paddingRight="4dp" android:paddingTop="3dp" android:paddingBottom="3dp">
+    <ImageView android:id="@+id/tbIcon" android:layout_width="28dp" android:layout_height="28dp" android:scaleType="fitCenter" />
+    <TextView android:id="@+id/tbText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textColor="#FF1E3287" android:textSize="11sp" android:singleLine="true" />
+</LinearLayout>

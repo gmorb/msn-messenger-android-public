@@ -1,0 +1,21 @@
+# Build output
+build/
+*/build/
+.gradle/
+*.apk
+*.aab
+
+# Local config and signing
+local.properties
+*.jks
+*.keystore
+.env
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+
+# Local backups
+java_backup_pre_i18n/
+placeholder_backup/

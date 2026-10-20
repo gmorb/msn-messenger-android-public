@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+    android:paddingLeft="6dp" android:paddingRight="6dp" android:paddingTop="3dp" android:paddingBottom="1dp">
+    <TextView android:id="@+id/tvSays" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textColor="#FF808080" android:textSize="13sp" />
+    <TextView android:id="@+id/tvBody" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingStart="14dp" android:textColor="#FF000000" android:textSize="14sp" android:autoLink="web" />
+    <ImageView android:id="@+id/ivImage" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginStart="14dp" android:layout_marginTop="3dp" android:maxWidth="220dp" android:maxHeight="220dp"
+        android:adjustViewBounds="true" android:scaleType="fitStart" android:background="@drawable/bg_tile_frame"
+        android:padding="2dp" android:visibility="gone" />
+    <TextView android:id="@+id/tvCaption" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginStart="14dp" android:paddingTop="2dp" android:paddingBottom="4dp" android:gravity="center_horizontal"
+        android:textColor="#FF0066CC" android:textSize="12sp" android:visibility="gone" />
+</LinearLayout>

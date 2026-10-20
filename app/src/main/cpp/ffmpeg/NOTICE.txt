@@ -1,0 +1,8 @@
+FFmpeg n6.1.1 (libavcodec, libavformat, libavutil, libswresample)
+
+Prebuilt static libraries and headers, configured as a WMA-only decoder (asf demuxer, wmav1/wmav2 decoders),
+built with ../build_ffmpeg.sh from the unmodified FFmpeg n6.1.1 source release (https://ffmpeg.org/releases/).
+No GPL or nonfree components are enabled.
+
+FFmpeg is licensed under the GNU Lesser General Public License version 2.1 or later; see COPYING.LGPLv2.1.
+You may rebuild and replace these libraries with ../build_ffmpeg.sh.

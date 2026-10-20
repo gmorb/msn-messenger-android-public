@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="i18n_en" translatable="false">
+        <item>%1$s is thinking...</item>
+        <item>%1$s is typing a message...</item>
+        <item>%1$s says:</item>
+        <item>%1$s will be available in a later version</item>
+        <item>*%1$s could not be invited.</item>
+        <item>*%1$s did not answer the %2$s.</item>
+        <item>*%1$s has been invited to the conversation.</item>
+        <item>*%1$s has just sent you a nudge.</item>
+        <item>*%1$s sent the wink \"%2$s\".</item>
+        <item>*The file could not be read.</item>
+        <item>*Transfer of \"%1$s\" failed.</item>
+        <item>*Transfer of \"%1$s\" is complete.</item>
+        <item>*You are sending \"%1$s\"%2$s.</item>
+        <item>*You have asked to start a %1$s with %2$s. Waiting for a response...</item>
+        <item>*You have ended the %1$s.</item>
+        <item>*You have invited %1$s to play Tic-Tac-Toe.</item>
+        <item>*You have just sent a nudge.</item>
+        <item>*You sent the wink \"%1$s\".</item>
+        <item>&lt;Type a personal message&gt;</item>
+        <item>Activities</item>
+        <item>Add</item>
+        <item>Add a Contact</item>
+        <item>Allow</item>
+        <item>Anyone on the server can join</item>
+        <item>Block</item>
+        <item>Block %1$s? They won\'t be able to see when you are online or send you messages.</item>
+        <item>Calling %1$s...</item>
+        <item>Cancel</item>
+        <item>Change Display Picture</item>
+        <item>Chat room</item>
+        <item>Chat room name</item>
+        <item>Clear</item>
+        <item>Close</item>
+        <item>Couldn\'t create the room: %1$s</item>
+        <item>Couldn\'t join: %1$s</item>
+        <item>Couldn\'t open this file: %1$s</item>
+        <item>Couldn\'t save: %1$s</item>
+        <item>Couldn\'t update your picture on the server.</item>
+        <item>Create</item>
+        <item>Create a Chat Room</item>
+        <item>Demo mode: no new chats</item>
+        <item>Demo mode: sign in to view and save shared files.</item>
+        <item>Display picture updated.</item>
+        <item>Emoticons</item>
+        <item>Error</item>
+        <item>Hang Up</item>
+        <item>Invite someone to this conversation</item>
+        <item>Invite usernames (optional, comma separated)</item>
+        <item>Join</item>
+        <item>Join a Chat Room</item>
+        <item>Last message received at %1$s.</item>
+        <item>Me</item>
+        <item>My Display Picture</item>
+        <item>My Status:</item>
+        <item>No file browser available</item>
+        <item>No photo app found.</item>
+        <item>Not now</item>
+        <item>OK</item>
+        <item>Personal message</item>
+        <item>Room name, #alias or room ID</item>
+        <item>Saving \"%1$s\" to Downloads/MSN Messenger...</item>
+        <item>Send a Wink</item>
+        <item>Send failed: %1$s</item>
+        <item>Sign-in error</item>
+        <item>Signed in as %1$s (%2$s)</item>
+        <item>Storage permission is needed to save files.</item>
+        <item>Tap to close</item>
+        <item>That picture couldn\'t be used.</item>
+        <item>The picture couldn\'t be loaded.</item>
+        <item>This video can\'t be played on this phone. Tap Save to download it.</item>
+        <item>Tic-Tac-Toe with %1$s</item>
+        <item>To get messages, nudges and winks when MSN Messenger is closed, allow it to keep running in the background.</item>
+        <item>To: %1$s</item>
+        <item>To: %1$s &lt;%2$s&gt;</item>
+        <item>Type a name for the chat room.</item>
+        <item>Type a personal message</item>
+        <item>Unblock</item>
+        <item>Unblock %1$s? They will be able to see your status and send you messages.</item>
+        <item>Username</item>
+        <item>Video</item>
+        <item>You are X. Your move.</item>
+        <item>You have 1 new e-mail message.</item>
+        <item>Your move.</item>
+        <item>▶ %1$s  (tap to play)</item>
+        <item>Online</item>
+        <item>Busy</item>
+        <item>Be Right Back</item>
+        <item>Away</item>
+        <item>In a Call</item>
+        <item>Out to Lunch</item>
+        <item>Appear Offline</item>
+        <item>Offline</item>
+        <item>webcam conversation</item>
+        <item>voice conversation</item>
+        <item>Invite</item>
+        <item>Send Files</item>
+        <item>Webcam</item>
+        <item>Call</item>
+        <item>Games</item>
+        <item>Change Font</item>
+        <item>Search</item>
+        <item>Messages</item>
+        <item>Nudges and winks</item>
+        <item>Signed in</item>
+        <item>Online (%1$s)</item>
+        <item>Offline (%1$s)</item>
+        <item>Chat Rooms (%1$s)</item>
+        <item>1 member</item>
+        <item>%1$s members</item>
+        <item>*%1$s has been blocked.</item>
+        <item>*%1$s has been unblocked.</item>
+        <item>*You won Tic-Tac-Toe against %1$s!</item>
+        <item>*%1$s won Tic-Tac-Toe.</item>
+        <item>*Tic-Tac-Toe with %1$s ended in a draw.</item>
+        <item>%1$s has just signed in.</item>
+        <item>%1$s sent you a wink.</item>
+        <item>%1$s says:\n%2$s</item>
+        <item>%1$s has just sent you a nudge.</item>
+        <item>%1$s sent you the wink \"%2$s\".</item>
+        <item>%1$s sent you a picture.</item>
+        <item>%1$s sent you a video.</item>
+        <item>%1$s sent you a file: %2$s</item>
+        <item>%1$s says: %2$s</item>
+        <item>Please type your e-mail address (Matrix username) and password.</item>
+        <item>We can\'t find the server %1$s. Check the address and that your phone is online.</item>
+        <item>The server took too long to respond. Please try again.</item>
+        <item>A secure connection to the server couldn\'t be made (%1$s).</item>
+        <item>Couldn\'t sign in: %1$s</item>
+        <item>No response from the server.</item>
+        <item>The e-mail address or password you entered is incorrect.\n\nUse your Matrix username (for example yourname or @yourname:server) and its password.</item>
+        <item>Too many sign-in attempts. %1$s</item>
+        <item>This account has been deactivated on the server.</item>
+        <item>This account is locked on the server.</item>
+        <item>Send a Nudge</item>
+        <item>Play Tic-Tac-Toe</item>
+        <item>Insert an Emoticon</item>
+        <item>Send a File or Photo</item>
+        <item>Original MSN pictures</item>
+        <item>Choose a photo...</item>
+        <item>Use my Matrix profile picture</item>
+        <item>Take a Photo</item>
+        <item>Record a Video</item>
+        <item>No camera app available</item>
+        <item>The camera could not be opened.</item>
+        <item>*The photo or video could not be saved.</item>
+        <item>Set up MSN Messenger</item>
+        <item>This app doesn\'t include Microsoft\'s original pictures and sounds. Choose your own MSN Messenger 8 installer (MSN Messenger 8.exe, MsnMsgs.msi or a .zip containing one of them) and the app will set them up. The installer is only read, nothing is installed.</item>
+        <item>Choose installer...</item>
+        <item>No file picker is available on this device.</item>
+        <item>Reading the installer...</item>
+        <item>The file could not be read.</item>
+        <item>Setting up...</item>
+        <item>Done!</item>
+        <item>Import failed:</item>
+        <item>Import winks...</item>
+        <item>No winks are installed. Tap Import winks... and choose your own wink files (.mco, .swf or a .zip of them).</item>
+        <item>Importing winks...</item>
+        <item>Winks imported:</item>
+        <item>MSN Messenger</item>
+        <item>Add MSN Messenger to your Home screen with the original icon?</item>
+        <item>The shortcut could not be added.</item>
+    </string-array>
+    <string-array name="i18n_tr">
+        <item>%1$s is thinking...</item>
+        <item>%1$s is typing a message...</item>
+        <item>%1$s says:</item>
+        <item>%1$s will be available in a later version</item>
+        <item>*%1$s could not be invited.</item>
+        <item>*%1$s did not answer the %2$s.</item>
+        <item>*%1$s has been invited to the conversation.</item>
+        <item>*%1$s has just sent you a nudge.</item>
+        <item>*%1$s sent the wink \"%2$s\".</item>
+        <item>*The file could not be read.</item>
+        <item>*Transfer of \"%1$s\" failed.</item>
+        <item>*Transfer of \"%1$s\" is complete.</item>
+        <item>*You are sending \"%1$s\"%2$s.</item>
+        <item>*You have asked to start a %1$s with %2$s. Waiting for a response...</item>
+        <item>*You have ended the %1$s.</item>
+        <item>*You have invited %1$s to play Tic-Tac-Toe.</item>
+        <item>*You have just sent a nudge.</item>
+        <item>*You sent the wink \"%1$s\".</item>
+        <item>&lt;Type a personal message&gt;</item>
+        <item>Activities</item>
+        <item>Add</item>
+        <item>Add a Contact</item>
+        <item>Allow</item>
+        <item>Anyone on the server can join</item>
+        <item>Block</item>
+        <item>Block %1$s? They won\'t be able to see when you are online or send you messages.</item>
+        <item>Calling %1$s...</item>
+        <item>Cancel</item>
+        <item>Change Display Picture</item>
+        <item>Chat room</item>
+        <item>Chat room name</item>
+        <item>Clear</item>
+        <item>Close</item>
+        <item>Couldn\'t create the room: %1$s</item>
+        <item>Couldn\'t join: %1$s</item>
+        <item>Couldn\'t open this file: %1$s</item>
+        <item>Couldn\'t save: %1$s</item>
+        <item>Couldn\'t update your picture on the server.</item>
+        <item>Create</item>
+        <item>Create a Chat Room</item>
+        <item>Demo mode: no new chats</item>
+        <item>Demo mode: sign in to view and save shared files.</item>
+        <item>Display picture updated.</item>
+        <item>Emoticons</item>
+        <item>Error</item>
+        <item>Hang Up</item>
+        <item>Invite someone to this conversation</item>
+        <item>Invite usernames (optional, comma separated)</item>
+        <item>Join</item>
+        <item>Join a Chat Room</item>
+        <item>Last message received at %1$s.</item>
+        <item>Me</item>
+        <item>My Display Picture</item>
+        <item>My Status:</item>
+        <item>No file browser available</item>
+        <item>No photo app found.</item>
+        <item>Not now</item>
+        <item>OK</item>
+        <item>Personal message</item>
+        <item>Room name, #alias or room ID</item>
+        <item>Saving \"%1$s\" to Downloads/MSN Messenger...</item>
+        <item>Send a Wink</item>
+        <item>Send failed: %1$s</item>
+        <item>Sign-in error</item>
+        <item>Signed in as %1$s (%2$s)</item>
+        <item>Storage permission is needed to save files.</item>
+        <item>Tap to close</item>
+        <item>That picture couldn\'t be used.</item>
+        <item>The picture couldn\'t be loaded.</item>
+        <item>This video can\'t be played on this phone. Tap Save to download it.</item>
+        <item>Tic-Tac-Toe with %1$s</item>
+        <item>To get messages, nudges and winks when MSN Messenger is closed, allow it to keep running in the background.</item>
+        <item>To: %1$s</item>
+        <item>To: %1$s &lt;%2$s&gt;</item>
+        <item>Type a name for the chat room.</item>
+        <item>Type a personal message</item>
+        <item>Unblock</item>
+        <item>Unblock %1$s? They will be able to see your status and send you messages.</item>
+        <item>Username</item>
+        <item>Video</item>
+        <item>You are X. Your move.</item>
+        <item>You have 1 new e-mail message.</item>
+        <item>Your move.</item>
+        <item>▶ %1$s  (tap to play)</item>
+        <item>Online</item>
+        <item>Busy</item>
+        <item>Be Right Back</item>
+        <item>Away</item>
+        <item>In a Call</item>
+        <item>Out to Lunch</item>
+        <item>Appear Offline</item>
+        <item>Offline</item>
+        <item>webcam conversation</item>
+        <item>voice conversation</item>
+        <item>Invite</item>
+        <item>Send Files</item>
+        <item>Webcam</item>
+        <item>Call</item>
+        <item>Games</item>
+        <item>Change Font</item>
+        <item>Search</item>
+        <item>Messages</item>
+        <item>Nudges and winks</item>
+        <item>Signed in</item>
+        <item>Online (%1$s)</item>
+        <item>Offline (%1$s)</item>
+        <item>Chat Rooms (%1$s)</item>
+        <item>1 member</item>
+        <item>%1$s members</item>
+        <item>*%1$s has been blocked.</item>
+        <item>*%1$s has been unblocked.</item>
+        <item>*You won Tic-Tac-Toe against %1$s!</item>
+        <item>*%1$s won Tic-Tac-Toe.</item>
+        <item>*Tic-Tac-Toe with %1$s ended in a draw.</item>
+        <item>%1$s has just signed in.</item>
+        <item>%1$s sent you a wink.</item>
+        <item>%1$s says:\n%2$s</item>
+        <item>%1$s has just sent you a nudge.</item>
+        <item>%1$s sent you the wink \"%2$s\".</item>
+        <item>%1$s sent you a picture.</item>
+        <item>%1$s sent you a video.</item>
+        <item>%1$s sent you a file: %2$s</item>
+        <item>%1$s says: %2$s</item>
+        <item>Please type your e-mail address (Matrix username) and password.</item>
+        <item>We can\'t find the server %1$s. Check the address and that your phone is online.</item>
+        <item>The server took too long to respond. Please try again.</item>
+        <item>A secure connection to the server couldn\'t be made (%1$s).</item>
+        <item>Couldn\'t sign in: %1$s</item>
+        <item>No response from the server.</item>
+        <item>The e-mail address or password you entered is incorrect.\n\nUse your Matrix username (for example yourname or @yourname:server) and its password.</item>
+        <item>Too many sign-in attempts. %1$s</item>
+        <item>This account has been deactivated on the server.</item>
+        <item>This account is locked on the server.</item>
+        <item>Send a Nudge</item>
+        <item>Play Tic-Tac-Toe</item>
+        <item>Insert an Emoticon</item>
+        <item>Send a File or Photo</item>
+        <item>Original MSN pictures</item>
+        <item>Choose a photo...</item>
+        <item>Use my Matrix profile picture</item>
+        <item>Take a Photo</item>
+        <item>Record a Video</item>
+        <item>No camera app available</item>
+        <item>The camera could not be opened.</item>
+        <item>*The photo or video could not be saved.</item>
+        <item>Set up MSN Messenger</item>
+        <item>This app doesn\'t include Microsoft\'s original pictures and sounds. Choose your own MSN Messenger 8 installer (MSN Messenger 8.exe, MsnMsgs.msi or a .zip containing one of them) and the app will set them up. The installer is only read, nothing is installed.</item>
+        <item>Choose installer...</item>
+        <item>No file picker is available on this device.</item>
+        <item>Reading the installer...</item>
+        <item>The file could not be read.</item>
+        <item>Setting up...</item>
+        <item>Done!</item>
+        <item>Import failed:</item>
+        <item>Import winks...</item>
+        <item>No winks are installed. Tap Import winks... and choose your own wink files (.mco, .swf or a .zip of them).</item>
+        <item>Importing winks...</item>
+        <item>Winks imported:</item>
+        <item>MSN Messenger</item>
+        <item>Add MSN Messenger to your Home screen with the original icon?</item>
+        <item>The shortcut could not be added.</item>
+    </string-array>
+</resources>

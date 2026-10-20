@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="i18n_tr">
+        <item>%1$s réfléchit...</item>
+        <item>%1$s est en train d\'écrire un message...</item>
+        <item>%1$s dit :</item>
+        <item>%1$s sera disponible dans une version ultérieure</item>
+        <item>*%1$s n\'a pas pu être invité.</item>
+        <item>*%1$s n\'a pas répondu à la %2$s.</item>
+        <item>*%1$s a été invité à la conversation.</item>
+        <item>*%1$s vient de vous envoyer un Wizz.</item>
+        <item>*%1$s a envoyé le clin d\'œil \"%2$s\".</item>
+        <item>*Le fichier n\'a pas pu être lu.</item>
+        <item>*Le transfert de \"%1$s\" a échoué.</item>
+        <item>*Le transfert de \"%1$s\" est terminé.</item>
+        <item>*Vous envoyez \"%1$s\"%2$s.</item>
+        <item>*Vous avez demandé à démarrer une %1$s avec %2$s. En attente d\'une réponse...</item>
+        <item>*Vous avez mis fin à la %1$s.</item>
+        <item>*Vous avez invité %1$s à jouer au morpion.</item>
+        <item>*Vous venez d\'envoyer un Wizz.</item>
+        <item>*Vous avez envoyé le clin d\'œil \"%1$s\".</item>
+        <item>&lt;Tapez un message perso&gt;</item>
+        <item>Activités</item>
+        <item>Ajouter</item>
+        <item>Ajouter un contact</item>
+        <item>Autoriser</item>
+        <item>Tout le monde sur le serveur peut rejoindre</item>
+        <item>Bloquer</item>
+        <item>Bloquer %1$s ? Ce contact ne pourra plus voir quand vous êtes en ligne ni vous envoyer de messages.</item>
+        <item>Appel de %1$s...</item>
+        <item>Annuler</item>
+        <item>Changer d\'image perso</item>
+        <item>Salon de discussion</item>
+        <item>Nom du salon</item>
+        <item>Effacer</item>
+        <item>Fermer</item>
+        <item>Impossible de créer le salon : %1$s</item>
+        <item>Impossible de rejoindre : %1$s</item>
+        <item>Impossible d\'ouvrir ce fichier : %1$s</item>
+        <item>Impossible d\'enregistrer : %1$s</item>
+        <item>Impossible de mettre à jour votre image sur le serveur.</item>
+        <item>Créer</item>
+        <item>Créer un salon</item>
+        <item>Mode démo : pas de nouvelles conversations</item>
+        <item>Mode démo : connectez-vous pour voir et enregistrer les fichiers partagés.</item>
+        <item>Image perso mise à jour.</item>
+        <item>Émoticônes</item>
+        <item>Erreur</item>
+        <item>Raccrocher</item>
+        <item>Inviter quelqu\'un à cette conversation</item>
+        <item>Inviter des utilisateurs (facultatif, séparés par des virgules)</item>
+        <item>Rejoindre</item>
+        <item>Rejoindre un salon</item>
+        <item>Dernier message reçu à %1$s.</item>
+        <item>Moi</item>
+        <item>Mon image perso</item>
+        <item>Mon statut :</item>
+        <item>Aucun explorateur de fichiers disponible</item>
+        <item>Aucune application photo trouvée.</item>
+        <item>Plus tard</item>
+        <item>OK</item>
+        <item>Message perso</item>
+        <item>Nom du salon, #alias ou ID du salon</item>
+        <item>Enregistrement de \"%1$s\" dans Téléchargements/MSN Messenger...</item>
+        <item>Envoyer un clin d\'œil</item>
+        <item>Échec de l\'envoi : %1$s</item>
+        <item>Erreur de connexion</item>
+        <item>Connecté en tant que %1$s (%2$s)</item>
+        <item>L\'autorisation de stockage est nécessaire pour enregistrer les fichiers.</item>
+        <item>Touchez pour fermer</item>
+        <item>Cette image n\'a pas pu être utilisée.</item>
+        <item>L\'image n\'a pas pu être chargée.</item>
+        <item>Cette vidéo ne peut pas être lue sur ce téléphone. Touchez Enregistrer pour la télécharger.</item>
+        <item>Morpion avec %1$s</item>
+        <item>Pour recevoir les messages, Wizz et clins d\'œil quand MSN Messenger est fermé, autorisez-le à fonctionner en arrière-plan.</item>
+        <item>À : %1$s</item>
+        <item>À : %1$s &lt;%2$s&gt;</item>
+        <item>Tapez un nom pour le salon.</item>
+        <item>Tapez un message perso</item>
+        <item>Débloquer</item>
+        <item>Débloquer %1$s ? Ce contact pourra voir votre statut et vous envoyer des messages.</item>
+        <item>Nom d\'utilisateur</item>
+        <item>Vidéo</item>
+        <item>Vous êtes X. À vous de jouer.</item>
+        <item>Vous avez 1 nouveau message électronique.</item>
+        <item>À vous de jouer.</item>
+        <item>▶ %1$s  (touchez pour lire)</item>
+        <item>En ligne</item>
+        <item>Occupé</item>
+        <item>De retour dans une minute</item>
+        <item>Absent</item>
+        <item>Au téléphone</item>
+        <item>Parti manger</item>
+        <item>Apparaître hors ligne</item>
+        <item>Hors ligne</item>
+        <item>conversation vidéo</item>
+        <item>conversation audio</item>
+        <item>Inviter</item>
+        <item>Envoyer des fichiers</item>
+        <item>Webcam</item>
+        <item>Appeler</item>
+        <item>Jeux</item>
+        <item>Changer la police</item>
+        <item>Rechercher</item>
+        <item>Messages</item>
+        <item>Wizz et clins d\'œil</item>
+        <item>Connecté</item>
+        <item>En ligne (%1$s)</item>
+        <item>Hors ligne (%1$s)</item>
+        <item>Salons (%1$s)</item>
+        <item>1 membre</item>
+        <item>%1$s membres</item>
+        <item>*%1$s a été bloqué.</item>
+        <item>*%1$s a été débloqué.</item>
+        <item>*Vous avez gagné au morpion contre %1$s !</item>
+        <item>*%1$s a gagné au morpion.</item>
+        <item>*La partie de morpion avec %1$s s\'est terminée par un match nul.</item>
+        <item>%1$s vient de se connecter.</item>
+        <item>%1$s vous a envoyé un clin d\'œil.</item>
+        <item>%1$s dit :\n%2$s</item>
+        <item>%1$s vient de vous envoyer un Wizz.</item>
+        <item>%1$s vous a envoyé le clin d\'œil \"%2$s\".</item>
+        <item>%1$s vous a envoyé une image.</item>
+        <item>%1$s vous a envoyé une vidéo.</item>
+        <item>%1$s vous a envoyé un fichier : %2$s</item>
+        <item>%1$s dit : %2$s</item>
+        <item>Tapez votre nom d\'utilisateur Matrix et votre mot de passe.</item>
+        <item>Impossible de trouver le serveur %1$s. Vérifiez l\'adresse et la connexion de votre téléphone.</item>
+        <item>Le serveur a mis trop de temps à répondre. Veuillez réessayer.</item>
+        <item>Impossible d\'établir une connexion sécurisée avec le serveur (%1$s).</item>
+        <item>Connexion impossible : %1$s</item>
+        <item>Aucune réponse du serveur.</item>
+        <item>Le nom d\'utilisateur ou le mot de passe est incorrect.\n\nUtilisez votre nom d\'utilisateur Matrix (par exemple votrenom) et son mot de passe.</item>
+        <item>Trop de tentatives de connexion. %1$s</item>
+        <item>Ce compte a été désactivé sur le serveur.</item>
+        <item>Ce compte est verrouillé sur le serveur.</item>
+        <item>Envoyer un Wizz</item>
+        <item>Jouer au morpion</item>
+        <item>Insérer une émoticône</item>
+        <item>Envoyer un fichier ou une photo</item>
+        <item>Images MSN d\'origine</item>
+        <item>Choisir une photo...</item>
+        <item>Utiliser ma photo de profil Matrix</item>
+        <item>Prendre une photo</item>
+        <item>Enregistrer une vidéo</item>
+        <item>Aucune application d\'appareil photo disponible</item>
+        <item>Impossible d\'ouvrir l\'appareil photo.</item>
+        <item>*Impossible d\'enregistrer la photo ou la vidéo.</item>
+        <item>Configurer MSN Messenger</item>
+        <item>Cette application n\'inclut pas les images et les sons originaux de Microsoft. Choisissez votre propre programme d\'installation de MSN Messenger 8 (MSN Messenger 8.exe, MsnMsgs.msi ou un .zip contenant l\'un d\'eux) et l\'application les configurera. Le programme d\'installation est seulement lu, rien n\'est installé.</item>
+        <item>Choisir le programme d\'installation...</item>
+        <item>Aucun sélecteur de fichiers n\'est disponible sur cet appareil.</item>
+        <item>Lecture du programme d\'installation...</item>
+        <item>Le fichier n\'a pas pu être lu.</item>
+        <item>Configuration...</item>
+        <item>Terminé !</item>
+        <item>Échec de l\'importation :</item>
+        <item>Importer des clins d\'œil...</item>
+        <item>Aucun clin d\'œil n\'est installé. Touchez Importer des clins d\'œil... et choisissez vos propres fichiers de clins d\'œil (.mco, .swf ou un .zip les contenant).</item>
+        <item>Importation des clins d\'œil...</item>
+        <item>Clins d\'œil importés :</item>
+        <item>MSN Messenger</item>
+        <item>Ajouter MSN Messenger à l\'écran d\'accueil avec l\'icône d\'origine ?</item>
+        <item>Le raccourci n\'a pas pu être ajouté.</item>
+    </string-array>
+</resources>

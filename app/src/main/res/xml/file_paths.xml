@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path name="camera" path="camera/" />
+    <!-- Original MSN sounds imported from the user's own installer (AssetStore / NotifyService). -->
+    <files-path name="msn" path="msn/" />
+</paths>

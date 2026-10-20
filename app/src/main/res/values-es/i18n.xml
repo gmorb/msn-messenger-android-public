@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="i18n_tr">
+        <item>%1$s está pensando...</item>
+        <item>%1$s está escribiendo un mensaje...</item>
+        <item>%1$s dice:</item>
+        <item>%1$s estará disponible en una versión posterior</item>
+        <item>*No se pudo invitar a %1$s.</item>
+        <item>*%1$s no respondió a la %2$s.</item>
+        <item>*%1$s ha sido invitado a la conversación.</item>
+        <item>*%1$s te acaba de enviar un zumbido.</item>
+        <item>*%1$s envió el guiño \"%2$s\".</item>
+        <item>*No se pudo leer el archivo.</item>
+        <item>*Error en la transferencia de \"%1$s\".</item>
+        <item>*La transferencia de \"%1$s\" ha finalizado.</item>
+        <item>*Estás enviando \"%1$s\"%2$s.</item>
+        <item>*Has pedido iniciar una %1$s con %2$s. Esperando respuesta...</item>
+        <item>*Has finalizado la %1$s.</item>
+        <item>*Has invitado a %1$s a jugar al tres en raya.</item>
+        <item>*Acabas de enviar un zumbido.</item>
+        <item>*Enviaste el guiño \"%1$s\".</item>
+        <item>&lt;Escribe un mensaje personal&gt;</item>
+        <item>Actividades</item>
+        <item>Agregar</item>
+        <item>Agregar un contacto</item>
+        <item>Permitir</item>
+        <item>Cualquiera en el servidor puede unirse</item>
+        <item>Bloquear</item>
+        <item>¿Bloquear a %1$s? No podrá ver cuándo estás conectado ni enviarte mensajes.</item>
+        <item>Llamando a %1$s...</item>
+        <item>Cancelar</item>
+        <item>Cambiar imagen para mostrar</item>
+        <item>Sala de chat</item>
+        <item>Nombre de la sala de chat</item>
+        <item>Borrar</item>
+        <item>Cerrar</item>
+        <item>No se pudo crear la sala: %1$s</item>
+        <item>No se pudo unir: %1$s</item>
+        <item>No se pudo abrir este archivo: %1$s</item>
+        <item>No se pudo guardar: %1$s</item>
+        <item>No se pudo actualizar tu imagen en el servidor.</item>
+        <item>Crear</item>
+        <item>Crear una sala de chat</item>
+        <item>Modo demo: no hay chats nuevos</item>
+        <item>Modo demo: inicia sesión para ver y guardar archivos compartidos.</item>
+        <item>Imagen para mostrar actualizada.</item>
+        <item>Emoticonos</item>
+        <item>Error</item>
+        <item>Colgar</item>
+        <item>Invitar a alguien a esta conversación</item>
+        <item>Invitar usuarios (opcional, separados por comas)</item>
+        <item>Unirse</item>
+        <item>Unirse a una sala de chat</item>
+        <item>Último mensaje recibido a las %1$s.</item>
+        <item>Yo</item>
+        <item>Mi imagen para mostrar</item>
+        <item>Mi estado:</item>
+        <item>No hay un explorador de archivos disponible</item>
+        <item>No se encontró una aplicación de fotos.</item>
+        <item>Ahora no</item>
+        <item>Aceptar</item>
+        <item>Mensaje personal</item>
+        <item>Nombre de la sala, #alias o ID de sala</item>
+        <item>Guardando \"%1$s\" en Descargas/MSN Messenger...</item>
+        <item>Enviar un guiño</item>
+        <item>Error al enviar: %1$s</item>
+        <item>Error de inicio de sesión</item>
+        <item>Sesión iniciada como %1$s (%2$s)</item>
+        <item>Se necesita permiso de almacenamiento para guardar archivos.</item>
+        <item>Toca para cerrar</item>
+        <item>No se pudo usar esa imagen.</item>
+        <item>No se pudo cargar la imagen.</item>
+        <item>Este vídeo no se puede reproducir en este teléfono. Toca Guardar para descargarlo.</item>
+        <item>Tres en raya con %1$s</item>
+        <item>Para recibir mensajes, zumbidos y guiños cuando MSN Messenger esté cerrado, permite que siga ejecutándose en segundo plano.</item>
+        <item>Para: %1$s</item>
+        <item>Para: %1$s &lt;%2$s&gt;</item>
+        <item>Escribe un nombre para la sala de chat.</item>
+        <item>Escribe un mensaje personal</item>
+        <item>Desbloquear</item>
+        <item>¿Desbloquear a %1$s? Podrá ver tu estado y enviarte mensajes.</item>
+        <item>Nombre de usuario</item>
+        <item>Vídeo</item>
+        <item>Eres X. Tu turno.</item>
+        <item>Tienes 1 mensaje de correo electrónico nuevo.</item>
+        <item>Tu turno.</item>
+        <item>▶ %1$s  (toca para reproducir)</item>
+        <item>Conectado</item>
+        <item>Ocupado</item>
+        <item>Vuelvo enseguida</item>
+        <item>Ausente</item>
+        <item>Al teléfono</item>
+        <item>Salí a comer</item>
+        <item>Aparecer como desconectado</item>
+        <item>Desconectado</item>
+        <item>conversación con cámara web</item>
+        <item>conversación de voz</item>
+        <item>Invitar</item>
+        <item>Enviar archivos</item>
+        <item>Cámara web</item>
+        <item>Llamar</item>
+        <item>Juegos</item>
+        <item>Cambiar fuente</item>
+        <item>Buscar</item>
+        <item>Mensajes</item>
+        <item>Zumbidos y guiños</item>
+        <item>Sesión iniciada</item>
+        <item>Conectados (%1$s)</item>
+        <item>Desconectados (%1$s)</item>
+        <item>Salas de chat (%1$s)</item>
+        <item>1 miembro</item>
+        <item>%1$s miembros</item>
+        <item>*%1$s ha sido bloqueado.</item>
+        <item>*%1$s ha sido desbloqueado.</item>
+        <item>*¡Ganaste al tres en raya contra %1$s!</item>
+        <item>*%1$s ganó al tres en raya.</item>
+        <item>*El tres en raya con %1$s terminó en empate.</item>
+        <item>%1$s acaba de iniciar sesión.</item>
+        <item>%1$s te envió un guiño.</item>
+        <item>%1$s dice:\n%2$s</item>
+        <item>%1$s te acaba de enviar un zumbido.</item>
+        <item>%1$s te envió el guiño \"%2$s\".</item>
+        <item>%1$s te envió una imagen.</item>
+        <item>%1$s te envió un vídeo.</item>
+        <item>%1$s te envió un archivo: %2$s</item>
+        <item>%1$s dice: %2$s</item>
+        <item>Escribe tu nombre de usuario de Matrix y tu contraseña.</item>
+        <item>No encontramos el servidor %1$s. Comprueba la dirección y que tu teléfono tenga conexión.</item>
+        <item>El servidor tardó demasiado en responder. Inténtalo de nuevo.</item>
+        <item>No se pudo establecer una conexión segura con el servidor (%1$s).</item>
+        <item>No se pudo iniciar sesión: %1$s</item>
+        <item>El servidor no respondió.</item>
+        <item>El nombre de usuario o la contraseña no son correctos.\n\nUsa tu nombre de usuario de Matrix (por ejemplo tunombre) y su contraseña.</item>
+        <item>Demasiados intentos de inicio de sesión. %1$s</item>
+        <item>Esta cuenta ha sido desactivada en el servidor.</item>
+        <item>Esta cuenta está bloqueada en el servidor.</item>
+        <item>Enviar un zumbido</item>
+        <item>Jugar al tres en raya</item>
+        <item>Insertar un emoticono</item>
+        <item>Enviar un archivo o una foto</item>
+        <item>Imágenes originales de MSN</item>
+        <item>Elegir una foto...</item>
+        <item>Usar mi imagen de perfil de Matrix</item>
+        <item>Tomar una foto</item>
+        <item>Grabar un vídeo</item>
+        <item>No hay ninguna aplicación de cámara disponible</item>
+        <item>No se pudo abrir la cámara.</item>
+        <item>*No se pudo guardar la foto o el vídeo.</item>
+        <item>Configurar MSN Messenger</item>
+        <item>Esta aplicación no incluye las imágenes ni los sonidos originales de Microsoft. Elige tu propio instalador de MSN Messenger 8 (MSN Messenger 8.exe, MsnMsgs.msi o un .zip que contenga uno de ellos) y la aplicación los configurará. El instalador solo se lee, no se instala nada.</item>
+        <item>Elegir instalador...</item>
+        <item>No hay ningún selector de archivos disponible en este dispositivo.</item>
+        <item>Leyendo el instalador...</item>
+        <item>No se pudo leer el archivo.</item>
+        <item>Configurando...</item>
+        <item>¡Listo!</item>
+        <item>Error al importar:</item>
+        <item>Importar guiños...</item>
+        <item>No hay guiños instalados. Toca Importar guiños... y elige tus propios archivos de guiños (.mco, .swf o un .zip con ellos).</item>
+        <item>Importando guiños...</item>
+        <item>Guiños importados:</item>
+        <item>MSN Messenger</item>
+        <item>¿Agregar MSN Messenger a la pantalla de inicio con el icono original?</item>
+        <item>No se pudo agregar el acceso directo.</item>
+    </string-array>
+</resources>

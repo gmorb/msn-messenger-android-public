@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wink_play" formatted="true">Play (\"%1$s\")</string>
+    <string name="font_title">Change Font</string>
+    <string name="font_face">Font:</string>
+    <string name="font_style">Font style:</string>
+    <string name="font_bold">Bold</string>
+    <string name="font_italic">Italic</string>
+    <string name="font_effects">Effects:</string>
+    <string name="font_strike">Strikeout</string>
+    <string name="font_underline">Underline</string>
+    <string name="font_size">Size:</string>
+    <string name="font_color">Color:</string>
+    <string name="font_sample">Sample</string>
+    <string name="voice_clip">Voice Clip</string>
+    <string name="voice_rec">Recording voice clip… release to send (%1$s)</string>
+    <string name="voice_short">Hold the Voice Clip button to record, then release to send.</string>
+    <string name="voice_perm">Allow the microphone to send voice clips.</string>
+    <string name="voice_line">Voice clip (%1$s)</string>
+    <string name="voice_fail">The voice clip could not be sent.</string>
+    <string name="voice_play_fail">The voice clip could not be played.</string>
+    <string name="qw_security">Never give out your password or credit card number in an instant message conversation.</string>
+    <string name="qw_nudge_limit">You may not send a Nudge that often.</string>
+    <string name="qw_show_emo">Show emoticons</string>
+    <string name="qw_away">Show me as \"Away\" when I\'m inactive for</string>
+    <string name="qw_minutes">minutes</string>
+    <string name="qw_options">Options</string>
+    <string name="qw_signing">Signing in...</string>
+    <string name="file_tap_save">Tap to save</string>
+</resources>

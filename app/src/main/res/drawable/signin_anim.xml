@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@drawable/signin_buddy_00" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_01" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_02" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_03" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_04" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_05" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_06" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_07" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_08" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_09" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_10" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_11" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_12" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_13" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_14" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_15" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_16" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_17" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_18" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_19" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_20" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_21" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_22" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_23" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_24" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_25" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_26" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_27" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_28" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_29" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_30" android:duration="42" />
+    <item android:drawable="@drawable/signin_buddy_31" android:duration="42" />
+</animation-list>

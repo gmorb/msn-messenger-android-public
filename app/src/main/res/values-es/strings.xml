@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_user">Nombre de usuario</string>
+    <string name="nudge">Zumbido</string>
+    <string name="send">Enviar</string>
+    <string name="search">Buscar</string>
+    <string name="login_email">Nombre de usuario:</string>
+    <string name="login_password">Contraseña:</string>
+    <string name="login_status">Estado:</string>
+    <string name="login_status_value">Conectado  ▾</string>
+    <string name="login_server">Servidor:</string>
+    <string name="remember_me">Recordarme</string>
+    <string name="remember_password">Recordar mi contraseña</string>
+    <string name="sign_in_auto">Iniciar sesión automáticamente</string>
+    <string name="sign_in">Iniciar sesión</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="service_status">Estado del servicio</string>
+    <string name="demo_sign_in">Probar la demo (sin cuenta)</string>
+    <string name="sign_out">Cerrar sesión</string>
+    <string name="me">Yo</string>
+    <string name="my_status_value">" (Conectado) ▾"</string>
+    <string name="psm_placeholder">&lt;Escribe un mensaje personal&gt;</string>
+    <string name="find_contact">Buscar un contacto...</string>
+    <string name="start_conversation">Iniciar una conversación</string>
+</resources>

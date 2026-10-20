@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wink_play" formatted="true">Reproducir (\"%1$s\")</string>
+    <string name="font_title">Cambiar fuente</string>
+    <string name="font_face">Fuente:</string>
+    <string name="font_style">Estilo:</string>
+    <string name="font_bold">Negrita</string>
+    <string name="font_italic">Cursiva</string>
+    <string name="font_effects">Efectos:</string>
+    <string name="font_strike">Tachado</string>
+    <string name="font_underline">Subrayado</string>
+    <string name="font_size">Tamaño:</string>
+    <string name="font_color">Color:</string>
+    <string name="font_sample">Ejemplo</string>
+    <string name="voice_clip">Clip de voz</string>
+    <string name="voice_rec">Grabando clip de voz… suelta para enviar (%1$s)</string>
+    <string name="voice_short">Mantén pulsado Clip de voz para grabar y suéltalo para enviar.</string>
+    <string name="voice_perm">Permite el micrófono para enviar clips de voz.</string>
+    <string name="voice_line">Clip de voz (%1$s)</string>
+    <string name="voice_fail">No se pudo enviar el clip de voz.</string>
+    <string name="voice_play_fail">No se pudo reproducir el clip de voz.</string>
+    <string name="qw_security">Nunca facilites tu contraseña ni el número de tu tarjeta de crédito en una conversación de mensajería instantánea.</string>
+    <string name="qw_nudge_limit">No puedes enviar zumbidos tan seguido.</string>
+    <string name="qw_show_emo">Mostrar emoticonos</string>
+    <string name="qw_away">Mostrarme como \"Ausente\" si estoy inactivo durante</string>
+    <string name="qw_minutes">minutos</string>
+    <string name="qw_options">Opciones</string>
+    <string name="qw_signing">Iniciando sesión...</string>
+    <string name="file_tap_save">Toca para guardar</string>
+</resources>

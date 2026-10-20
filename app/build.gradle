@@ -1,0 +1,56 @@
+plugins { id 'com.android.application' }
+
+// Optional default server, read from the git-ignored local.properties (msn.server=https://...)
+def msnProps = new Properties()
+def msnPropsFile = rootProject.file('local.properties')
+if (msnPropsFile.exists()) msnPropsFile.withInputStream { msnProps.load(it) }
+
+android {
+    namespace 'com.msnmessenger'
+    compileSdk 34
+    ndkVersion "26.3.11579264"
+    defaultConfig {
+        applicationId "com.msnmessenger"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        // Build with -PnoServer for the public/GitHub release APK (empty server field)
+        resValue "string", "default_server", project.hasProperty("noServer") ? "" : msnProps.getProperty("msn.server", "")
+        // WMA -> WAV decoder used by the on-phone installer importer (app/src/main/cpp)
+        ndk { abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64' }
+        externalNativeBuild { cmake { arguments '-DANDROID_STL=none' } }
+    }
+    externalNativeBuild {
+        cmake {
+            path 'src/main/cpp/CMakeLists.txt'
+            version '3.22.1'
+        }
+    }
+    // Private build: original Microsoft assets from src/msn (kept out of the public repo).
+    // Public build (-PnoServer): no Microsoft files; transparent placeholders, assets imported on the phone.
+    def publicBuild = project.hasProperty("noServer")
+    defaultConfig.resValue "bool", "bundled_assets", publicBuild ? "false" : "true"
+    sourceSets {
+        main {
+            if (publicBuild) {
+                res.srcDirs += 'src/placeholder/res'
+            } else {
+                res.srcDirs += 'src/msn/res'
+                assets.srcDirs += 'src/msn/assets'
+            }
+        }
+    }
+    buildTypes {
+        debug { applicationIdSuffix ".debug" }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+}

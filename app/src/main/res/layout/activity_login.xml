@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@drawable/bg_wlm_frame">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="64dp"
+        android:background="@drawable/bg_wlm_header">
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+            android:src="@drawable/swirl_header" android:tag="asset:swirl_header" android:scaleType="centerCrop" android:alpha="0.8" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="28dp"
+            android:layout_gravity="center_vertical" android:layout_marginStart="10dp"
+            android:adjustViewBounds="true" android:src="@drawable/wlm_logo" android:tag="asset:wlm_logo" />
+    </FrameLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center_horizontal"
+        android:paddingLeft="24dp" android:paddingRight="24dp" android:paddingBottom="16dp">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="30dp" android:layout_marginBottom="17dp" android:background="@drawable/bg_tile_frame">
+            <ImageView android:id="@+id/ivLoginTile" android:layout_width="96dp" android:layout_height="96dp" android:src="@drawable/tile_default" android:tag="asset:tile_default" />
+        </FrameLayout>
+        <LinearLayout android:layout_width="280dp" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView style="@style/WlmLabel" android:text="@string/login_email" />
+            <EditText android:id="@+id/etUser" style="@style/WlmField" android:hint="@string/hint_user"
+                android:inputType="textEmailAddress" />
+            <TextView style="@style/WlmLabel" android:text="@string/login_password" />
+            <EditText android:id="@+id/etPass" style="@style/WlmField" android:inputType="textPassword" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                <TextView style="@style/WlmLabel" android:layout_width="wrap_content" android:text="@string/login_status" android:layout_marginBottom="0dp" />
+                <ImageView android:id="@+id/ivLoginStatus" android:layout_width="16dp" android:layout_height="16dp" android:layout_marginStart="6dp" android:src="@drawable/tray_online" android:tag="asset:tray_online" />
+                <TextView android:id="@+id/tvLoginStatus" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:paddingStart="4dp" android:paddingEnd="4dp" android:text="@string/login_status_value" android:textColor="#FF333333" android:textSize="13sp" />
+            </LinearLayout>
+            <TextView style="@style/WlmLabel" android:text="@string/login_server" android:textSize="11sp" android:textColor="#FF63614E" />
+            <EditText android:id="@+id/etServer" style="@style/WlmField" android:textSize="12sp"
+                android:text="@string/default_server" android:hint="https://matrix.example.org" android:inputType="textUri" />
+            <CheckBox android:id="@+id/cbRememberMe" style="@style/WlmCheck" android:text="@string/remember_me" android:checked="true" />
+            <CheckBox android:id="@+id/cbRememberPass" style="@style/WlmCheck" android:text="@string/remember_password" />
+            <CheckBox android:id="@+id/cbAutoSignIn" style="@style/WlmCheck" android:text="@string/sign_in_auto" />
+        </LinearLayout>
+        <Button android:id="@+id/btnLogin" style="@style/WlmPushButton" android:layout_marginTop="18dp" android:text="@string/sign_in" />
+        <ProgressBar android:id="@+id/progress" android:layout_width="28dp" android:layout_height="28dp"
+            android:layout_marginTop="6dp" android:visibility="gone" />
+        <TextView android:id="@+id/tvSigning" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"
+            android:text="@string/qw_signing" android:textColor="#FF1E3287" android:textSize="13sp" android:visibility="gone" />
+        <LinearLayout android:layout_width="280dp" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginTop="40dp">
+            <TextView style="@style/WlmLink" android:text="@string/forgot_password" />
+            <TextView style="@style/WlmLink" android:text="@string/service_status" />
+            <TextView android:id="@+id/btnDemo" style="@style/WlmLink" android:text="@string/demo_sign_in" android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

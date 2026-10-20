@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Public build launcher icon: original artwork (blue circle, two-buddy silhouette). Not Microsoft artwork. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF2F6FC9"
+        android:pathData="M12,1a11,11 0,1 1,0 22a11,11 0,1 1,0 -22z" />
+    <path
+        android:fillColor="#FF9CC7F2"
+        android:pathData="M12,1.8a10.2,10.2 0,0 1,9.6 6.8a12,9 0,0 0,-19.2 0a10.2,10.2 0,0 1,9.6 -6.8z" />
+    <group
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:pivotX="12"
+        android:pivotY="12">
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M15.5,3.5a3,3 0,1 1,0 6a3,3 0,1 1,0 -6z M10.6,18.5c0.4,-3.6 2.3,-6.8 4.9,-6.8c2.9,0 5,3.9 5,7.8c0,0.6 -0.4,1 -1,1h-7.6c0,-0.7 -0.5,-1.4 -1.3,-2z" />
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M8.5,6a3.4,3.4 0,1 1,0 6.8a3.4,3.4 0,1 1,0 -6.8z M2.5,21.5c0,-4.2 2.6,-7.6 6,-7.6s6,3.4 6,7.6c0,0.6 -0.4,1 -1,1h-10c-0.6,0 -1,-0.4 -1,-1z" />
+    </group>
+</vector>
