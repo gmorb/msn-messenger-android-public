@@ -370,7 +370,7 @@ public class MainActivity extends Activity {
             Object o = rows.get(p);
             LayoutInflater inf = LayoutInflater.from(MainActivity.this);
             if (o instanceof String) {
-                if (v == null) v = inf.inflate(R.layout.row_group, parent, false);
+                if (v == null) { v = inf.inflate(R.layout.row_group, parent, false); AssetStore.set((ImageView) v.findViewById(R.id.ivArrow), R.drawable.group_arrow); }
                 String g = (String) o;
                 boolean open = g.startsWith("Online") ? showOnline : g.startsWith("Chat Rooms") ? showRooms : showOffline;
                 ((TextView) v.findViewById(R.id.tvGroup)).setText(I18n.tr(g));

@@ -19,6 +19,7 @@ import android.os.IBinder;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.IconCompat;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -99,13 +100,27 @@ public class NotifyService extends Service {
         return new Intent(c, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
     }
 
+    /**
+     * Notification small icon: the original green buddy imported from the user's installer when available
+     * (asset-free public build), otherwise the per-build resource notif_small (green buddy in bundled builds).
+     */
+    static IconCompat smallIcon(Context c) {
+        try {
+            if (!AssetStore.bundled(c) && AssetStore.imported(c)) {
+                Bitmap b = AssetStore.bitmap(c, "presence_online");
+                if (b != null) return IconCompat.createWithBitmap(b);
+            }
+        } catch (Throwable ignored) {}
+        return IconCompat.createWithResource(c, R.drawable.notif_small);
+    }
+
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         I18n.init(this);
         channels(this);
         SharedPreferences p = getSharedPreferences("msn", MODE_PRIVATE);
         Notification fg = new NotificationCompat.Builder(this, CH_SVC)
-            .setSmallIcon(R.drawable.notif_small)
+            .setSmallIcon(smallIcon(this))
             .setContentTitle(I18n.tr("MSN Messenger"))
             .setContentText(I18n.tr("Signed in as " + MainActivity.displayFromId(p.getString("user", "")) + " (" + p.getString("my_status", "Online") + ")"))
             .setPriority(NotificationCompat.PRIORITY_MIN).setOngoing(true).setShowWhen(false)
@@ -234,7 +249,7 @@ public class NotifyService extends Service {
         chat.putExtra("isDemo", false);
         if (large == null) try { large = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher); } catch (Exception ignored) {}
         NotificationCompat.Builder b = new NotificationCompat.Builder(this, loud ? CH_NUDGE : CH_MSG)
-            .setSmallIcon(R.drawable.notif_small)
+            .setSmallIcon(smallIcon(this))
             .setContentTitle(I18n.tr(title))
             .setContentText(I18n.tr(line))
             .setStyle(st)
