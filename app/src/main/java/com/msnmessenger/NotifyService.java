@@ -105,7 +105,7 @@ public class NotifyService extends Service {
         channels(this);
         SharedPreferences p = getSharedPreferences("msn", MODE_PRIVATE);
         Notification fg = new NotificationCompat.Builder(this, CH_SVC)
-            .setSmallIcon(R.drawable.ic_stat_msn)
+            .setSmallIcon(R.drawable.notif_small)
             .setContentTitle(I18n.tr("MSN Messenger"))
             .setContentText(I18n.tr("Signed in as " + MainActivity.displayFromId(p.getString("user", "")) + " (" + p.getString("my_status", "Online") + ")"))
             .setPriority(NotificationCompat.PRIORITY_MIN).setOngoing(true).setShowWhen(false)
@@ -234,7 +234,7 @@ public class NotifyService extends Service {
         chat.putExtra("isDemo", false);
         if (large == null) try { large = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher); } catch (Exception ignored) {}
         NotificationCompat.Builder b = new NotificationCompat.Builder(this, loud ? CH_NUDGE : CH_MSG)
-            .setSmallIcon(R.drawable.ic_stat_msn)
+            .setSmallIcon(R.drawable.notif_small)
             .setContentTitle(I18n.tr(title))
             .setContentText(I18n.tr(line))
             .setStyle(st)

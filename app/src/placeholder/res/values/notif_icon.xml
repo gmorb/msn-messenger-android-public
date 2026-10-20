@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Notification small icon for the asset-free public build (not Microsoft artwork) -->
+<resources>
+    <item name="notif_small" type="drawable">@drawable/ic_stat_msn</item>
+</resources>
