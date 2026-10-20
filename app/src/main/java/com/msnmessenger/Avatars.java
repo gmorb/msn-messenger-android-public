@@ -170,7 +170,7 @@ public class Avatars {
             for (String u : urls) {
                 HttpURLConnection conn = (HttpURLConnection) new URL(u).openConnection();
                 conn.setConnectTimeout(10000); conn.setReadTimeout(20000);
-                conn.setRequestProperty("Authorization", "Bearer " + token);
+                conn.setRequestProperty("Authorization", Session.bearer(token));
                 if (conn.getResponseCode() != 200) { conn.disconnect(); continue; }
                 byte[] data = readAll(conn.getInputStream());
                 Bitmap b = decodeSampled(data, 1024);
@@ -187,7 +187,7 @@ public class Avatars {
             String u = server.replaceAll("/+$", "") + "/_matrix/client/v3/profile/" + URLEncoder.encode(uid, "UTF-8") + "/avatar_url";
             HttpURLConnection conn = (HttpURLConnection) new URL(u).openConnection();
             conn.setConnectTimeout(10000); conn.setReadTimeout(15000);
-            conn.setRequestProperty("Authorization", "Bearer " + token);
+            conn.setRequestProperty("Authorization", Session.bearer(token));
             if (conn.getResponseCode() != 200) return null;
             String t = new Scanner(conn.getInputStream(), "UTF-8").useDelimiter("\\A").next();
             String m = new JSONObject(t).optString("avatar_url", "");
@@ -202,7 +202,7 @@ public class Avatars {
             HttpURLConnection up = (HttpURLConnection) new URL(base + "/_matrix/media/v3/upload?filename=display_picture").openConnection();
             up.setRequestMethod("POST"); up.setDoOutput(true);
             up.setConnectTimeout(15000); up.setReadTimeout(30000);
-            up.setRequestProperty("Authorization", "Bearer " + token);
+            up.setRequestProperty("Authorization", Session.bearer(token));
             up.setRequestProperty("Content-Type", mime == null ? "image/png" : mime);
             up.getOutputStream().write(data);
             if (up.getResponseCode() != 200) return null;
@@ -210,7 +210,7 @@ public class Avatars {
             if (!mxc.startsWith("mxc://")) return null;
             HttpURLConnection pr = (HttpURLConnection) new URL(base + "/_matrix/client/v3/profile/" + URLEncoder.encode(uid, "UTF-8") + "/avatar_url").openConnection();
             pr.setRequestMethod("PUT"); pr.setDoOutput(true);
-            pr.setRequestProperty("Authorization", "Bearer " + token);
+            pr.setRequestProperty("Authorization", Session.bearer(token));
             pr.setRequestProperty("Content-Type", "application/json");
             pr.getOutputStream().write(new JSONObject().put("avatar_url", mxc).toString().getBytes("UTF-8"));
             if (pr.getResponseCode() != 200) return null;

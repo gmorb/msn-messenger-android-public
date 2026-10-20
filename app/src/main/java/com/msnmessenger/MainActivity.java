@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle b) {
         super.onCreate(b);
-        I18n.init(this);
+        I18n.init(this); Session.init(this);
         try {
             setContentView(R.layout.activity_main);
             AssetStore.applyTags(findViewById(android.R.id.content));
@@ -113,6 +113,7 @@ public class MainActivity extends Activity {
             btnNewChat.setOnClickListener(newChat);
             findViewById(R.id.btnAddContact).setOnClickListener(newChat);
             btnLogout.setOnClickListener(v -> {
+                Session.signOut(this);
                 NotifyService.stop(this);
                 SharedPreferences spOut = getSharedPreferences("msn", MODE_PRIVATE);
                 java.util.Map<String, ?> allOut = spOut.getAll();
@@ -607,7 +608,7 @@ public class MainActivity extends Activity {
                 String url = server.replaceAll("/$", "") + "/_matrix/client/v3/presence/" + java.net.URLEncoder.encode(userId, "UTF-8") + "/status";
                 HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
                 conn.setRequestMethod("PUT");
-                conn.setRequestProperty("Authorization", "Bearer " + token);
+                conn.setRequestProperty("Authorization", Session.bearer(token));
                 conn.setRequestProperty("Content-Type", "application/json");
                 conn.setDoOutput(true);
                 conn.getOutputStream().write(body.toString().getBytes("UTF-8"));
@@ -640,7 +641,7 @@ public class MainActivity extends Activity {
                     HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
                     conn.setConnectTimeout(15000);
                     conn.setReadTimeout(45000);
-                    conn.setRequestProperty("Authorization", "Bearer " + token);
+                    conn.setRequestProperty("Authorization", Session.bearer(token));
                     if (conn.getResponseCode() != 200) { conn.disconnect(); Thread.sleep(5000); continue; }
                     InputStream is = conn.getInputStream();
                     String text = new Scanner(is, "UTF-8").useDelimiter("\\A").next();
@@ -789,7 +790,7 @@ public class MainActivity extends Activity {
         HttpURLConnection conn = (HttpURLConnection) new URL(server.replaceAll("/$", "") + path).openConnection();
         conn.setRequestMethod("POST");
         conn.setConnectTimeout(15000); conn.setReadTimeout(30000);
-        conn.setRequestProperty("Authorization", "Bearer " + token);
+        conn.setRequestProperty("Authorization", Session.bearer(token));
         conn.setRequestProperty("Content-Type", "application/json");
         conn.setDoOutput(true);
         conn.getOutputStream().write(body.toString().getBytes("UTF-8"));
@@ -898,7 +899,7 @@ public class MainActivity extends Activity {
                         body.put("is_direct", true);
                         HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
                         conn.setRequestMethod("POST");
-                        conn.setRequestProperty("Authorization", "Bearer " + token);
+                        conn.setRequestProperty("Authorization", Session.bearer(token));
                         conn.setRequestProperty("Content-Type", "application/json");
                         conn.setDoOutput(true);
                         conn.getOutputStream().write(body.toString().getBytes("UTF-8"));

@@ -21,6 +21,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".ImportActivity" android:exported="false" />
+        <activity android:name=".AuthCallbackActivity" android:exported="true"
+            android:theme="@android:style/Theme.NoDisplay" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="io.github.gmorb.msnmessenger" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity" android:exported="false" />
         <activity android:name=".ChatActivity" android:exported="false" />
         <service android:name=".NotifyService" android:exported="false" android:foregroundServiceType="dataSync" />

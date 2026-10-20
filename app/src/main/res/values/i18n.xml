@@ -162,6 +162,12 @@
         <item>MSN Messenger</item>
         <item>Add MSN Messenger to your Home screen with the original icon?</item>
         <item>The shortcut could not be added.</item>
+        <item>Sign in with %1$s</item>
+        <item>Sign in with your browser</item>
+        <item>Sign in with SSO</item>
+        <item>Couldn\'t open your browser.</item>
+        <item>Couldn\'t start signing in: %1$s</item>
+        <item>Couldn\'t finish signing in: %1$s</item>
     </string-array>
     <string-array name="i18n_tr">
         <item>%1$s is thinking...</item>
@@ -325,5 +331,11 @@
         <item>MSN Messenger</item>
         <item>Add MSN Messenger to your Home screen with the original icon?</item>
         <item>The shortcut could not be added.</item>
+        <item>Sign in with %1$s</item>
+        <item>Sign in with your browser</item>
+        <item>Sign in with SSO</item>
+        <item>Couldn\'t open your browser.</item>
+        <item>Couldn\'t start signing in: %1$s</item>
+        <item>Couldn\'t finish signing in: %1$s</item>
     </string-array>
 </resources>

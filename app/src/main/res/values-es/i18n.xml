@@ -162,5 +162,11 @@
         <item>MSN Messenger</item>
         <item>¿Agregar MSN Messenger a la pantalla de inicio con el icono original?</item>
         <item>No se pudo agregar el acceso directo.</item>
+        <item>Iniciar sesión con %1$s</item>
+        <item>Iniciar sesión con el navegador</item>
+        <item>Iniciar sesión con SSO</item>
+        <item>No se pudo abrir el navegador.</item>
+        <item>No se pudo iniciar la sesión: %1$s</item>
+        <item>No se pudo completar el inicio de sesión: %1$s</item>
     </string-array>
 </resources>

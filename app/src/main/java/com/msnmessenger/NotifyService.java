@@ -140,6 +140,7 @@ public class NotifyService extends Service {
     boolean nap(long ms) { try { Thread.sleep(ms); return run; } catch (InterruptedException e) { return false; } }
 
     void loop() {
+        Session.init(this);
         SharedPreferences p = getSharedPreferences("msn", MODE_PRIVATE);
         String since = p.getString("notify_since", null);
         int fails = 0;
@@ -157,9 +158,9 @@ public class NotifyService extends Service {
                     + (first ? "" : "&since=" + URLEncoder.encode(since, "UTF-8"));
                 HttpURLConnection c = (HttpURLConnection) new URL(url).openConnection();
                 c.setConnectTimeout(15000); c.setReadTimeout(45000);
-                c.setRequestProperty("Authorization", "Bearer " + token);
+                c.setRequestProperty("Authorization", Session.bearer(token));
                 int code = c.getResponseCode();
-                if (code == 401) { stopSelf(); return; }
+                if (code == 401) { c.disconnect(); if (fails++ < 3 && Session.refresh(true)) continue; stopSelf(); return; }
                 if (code != 200) { c.disconnect(); fails++; if (!nap(Math.min(60000, 3000L * fails))) return; continue; }
                 JSONObject j = new JSONObject(new Scanner(c.getInputStream(), "UTF-8").useDelimiter("\\A").next());
                 String nb = j.optString("next_batch", since);

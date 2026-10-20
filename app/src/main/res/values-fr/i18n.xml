@@ -162,5 +162,11 @@
         <item>MSN Messenger</item>
         <item>Ajouter MSN Messenger à l\'écran d\'accueil avec l\'icône d\'origine ?</item>
         <item>Le raccourci n\'a pas pu être ajouté.</item>
+        <item>Se connecter avec %1$s</item>
+        <item>Se connecter avec le navigateur</item>
+        <item>Se connecter avec SSO</item>
+        <item>Impossible d\'ouvrir le navigateur.</item>
+        <item>Impossible de commencer la connexion : %1$s</item>
+        <item>Impossible de terminer la connexion : %1$s</item>
     </string-array>
 </resources>

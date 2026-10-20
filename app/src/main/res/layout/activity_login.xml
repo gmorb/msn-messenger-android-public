@@ -39,6 +39,8 @@
             <CheckBox android:id="@+id/cbAutoSignIn" style="@style/WlmCheck" android:text="@string/sign_in_auto" />
         </LinearLayout>
         <Button android:id="@+id/btnLogin" style="@style/WlmPushButton" android:layout_marginTop="18dp" android:text="@string/sign_in" />
+        <LinearLayout android:id="@+id/llSso" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:visibility="gone" />
         <ProgressBar android:id="@+id/progress" android:layout_width="28dp" android:layout_height="28dp"
             android:layout_marginTop="6dp" android:visibility="gone" />
         <TextView android:id="@+id/tvSigning" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"

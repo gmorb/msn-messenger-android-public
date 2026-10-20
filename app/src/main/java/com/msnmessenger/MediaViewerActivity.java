@@ -40,7 +40,7 @@ public class MediaViewerActivity extends Activity {
     @Override
     protected void onCreate(Bundle b) {
         super.onCreate(b);
-        I18n.init(this);
+        I18n.init(this); Session.init(this);
         try {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
             server = getIntent().getStringExtra("server");
@@ -147,7 +147,7 @@ public class MediaViewerActivity extends Activity {
             try {
                 java.net.HttpURLConnection c = (java.net.HttpURLConnection) new java.net.URL(u).openConnection();
                 c.setConnectTimeout(15000); c.setReadTimeout(60000);
-                c.setRequestProperty("Authorization", "Bearer " + token);
+                c.setRequestProperty("Authorization", Session.bearer(token));
                 if (c.getResponseCode() != 200) { c.disconnect(); continue; }
                 byte[] d = Avatars.readAll(c.getInputStream());
                 Bitmap b = Avatars.decodeSampled(d, 2048);
@@ -164,7 +164,7 @@ public class MediaViewerActivity extends Activity {
         mc.setAnchorView(video);
         video.setMediaController(mc);
         Map<String, String> h = new HashMap<>();
-        h.put("Authorization", "Bearer " + token);
+        h.put("Authorization", Session.bearer(token));
         video.setVideoURI(Uri.parse(downloadUrl()), h);
         video.setOnPreparedListener(mp -> { spinner.setVisibility(View.GONE); video.start(); mc.show(3000); });
         video.setOnErrorListener((mp, what, extra) -> {
@@ -189,7 +189,7 @@ public class MediaViewerActivity extends Activity {
             String safe = name.replaceAll("[\\\\/:*?\"<>|]", "_");
             String path = mxc != null && mxc.startsWith("mxc://") ? mxc.substring(6) : "";
             DownloadManager.Request r = new DownloadManager.Request(Uri.parse(server.replaceAll("/+$", "") + "/_matrix/client/v1/media/download/" + path));
-            r.addRequestHeader("Authorization", "Bearer " + token);
+            r.addRequestHeader("Authorization", Session.bearer(token));
             r.setTitle(safe);
             r.setDescription("MSN Messenger");
             if (mime != null && !mime.isEmpty()) r.setMimeType(mime);

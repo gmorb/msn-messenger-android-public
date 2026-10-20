@@ -42,7 +42,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle b) {
         super.onCreate(b);
-        I18n.init(this);
+        I18n.init(this); Session.init(this);
         // Public build: no bundled Microsoft assets until the user imports their own installer
         if (!AssetStore.ready(this)) {
             startActivity(new Intent(this, ImportActivity.class));
@@ -66,6 +66,8 @@ public class LoginActivity extends Activity {
             btnLogin.setOnClickListener(v -> doLogin());
             btnDemo.setOnClickListener(v -> startDemo());
             setupRemember();
+            setupSso();
+            if (handleRedirect(getIntent())) return;
             if (autoSignIn()) return;
         } catch (Exception e) {
             showCrash(e);
@@ -190,6 +192,7 @@ public class LoginActivity extends Activity {
                     getSharedPreferences("msn", MODE_PRIVATE).edit()
                         .putString("token", res[0]).putString("user", res[1])
                         .putString("server", hs).putString("device", res[5])
+                        .putString("auth_kind", "password").remove("refresh_token").remove("token_expires")
                         .putBoolean("isDemo", false).apply();
                     saveRemember(user, pass, base);
                     runOnUiThread(() -> {
@@ -308,6 +311,115 @@ public class LoginActivity extends Activity {
             default:
                 return "Sign-in failed (" + code + ", HTTP " + r[4] + "): " + r[3];
         }
+    }
+
+    // ---- Single sign-on (classic Matrix SSO) and OAuth 2.0 (Matrix Authentication Service).
+    // Buttons appear only when the server offers these; the classic sign-in box always stays.
+    LinearLayout llSso;
+    final android.os.Handler probeUi = new android.os.Handler(android.os.Looper.getMainLooper());
+    String probedBase;
+    final Runnable probeRun = this::probeServer;
+
+    void setupSso() {
+        llSso = findViewById(R.id.llSso);
+        if (llSso == null) return;
+        etServer.addTextChangedListener(new android.text.TextWatcher() {
+            public void beforeTextChanged(CharSequence s, int a, int c, int d) {}
+            public void onTextChanged(CharSequence s, int a, int c, int d) {}
+            public void afterTextChanged(android.text.Editable s) { probeUi.removeCallbacks(probeRun); probeUi.postDelayed(probeRun, 900); }
+        });
+        probeServer();
+    }
+
+    static String baseOf(String server) {
+        server = server.trim();
+        if (server.isEmpty()) return "";
+        if (!server.startsWith("http://") && !server.startsWith("https://")) server = "https://" + server;
+        return server.replaceAll("/+$", "");
+    }
+
+    /** Asks the server which sign-in methods it offers and shows matching buttons. */
+    void probeServer() {
+        if (llSso == null) return;
+        final String base = baseOf(etServer.getText().toString());
+        if (base.equals(probedBase)) return;
+        probedBase = base;
+        llSso.removeAllViews();
+        llSso.setVisibility(View.GONE);
+        if (base.isEmpty()) return;
+        new Thread(() -> {
+            final Session.Methods m = Session.discover(base);
+            runOnUiThread(() -> { if (!isFinishing() && base.equals(probedBase)) showMethods(base, m); });
+        }).start();
+    }
+
+    void showMethods(final String base, final Session.Methods m) {
+        llSso.removeAllViews();
+        if (m.oauth != null) {
+            addSsoButton(I18n.tr("Sign in with your browser"), v -> startOAuth(base, m));
+        } else if (m.sso) {
+            if (m.idps.isEmpty()) addSsoButton(I18n.tr("Sign in with SSO"), v -> openBrowser(Session.ssoUrl(this, base, m.hs, null)));
+            for (final String[] idp : m.idps)
+                addSsoButton(I18n.tr("Sign in with " + idp[1]), v -> openBrowser(Session.ssoUrl(this, base, m.hs, idp[0])));
+        }
+        llSso.setVisibility(llSso.getChildCount() > 0 ? View.VISIBLE : View.GONE);
+    }
+
+    void addSsoButton(String text, View.OnClickListener l) {
+        Button b = new Button(this, null, 0, R.style.WlmPushButton);
+        b.setText(text);
+        b.setAllCaps(false);
+        b.setOnClickListener(l);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.topMargin = (int) (8 * getResources().getDisplayMetrics().density);
+        llSso.addView(b, lp);
+    }
+
+    void openBrowser(String url) {
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, android.net.Uri.parse(url)).addCategory(Intent.CATEGORY_BROWSABLE));
+        } catch (Exception e) {
+            signInError("Couldn't open your browser.");
+        }
+    }
+
+    void startOAuth(final String base, final Session.Methods m) {
+        new Thread(() -> {
+            try {
+                final String url = Session.oauthUrl(this, base, m.hs, m.oauth);
+                runOnUiThread(() -> openBrowser(url));
+            } catch (Exception e) {
+                final String msg = "Couldn't start signing in: " + e.getMessage();
+                runOnUiThread(() -> signInError(msg));
+            }
+        }).start();
+    }
+
+    /** Browser sign-in result, forwarded by AuthCallbackActivity. Returns true if one was handled. */
+    boolean handleRedirect(Intent in) {
+        final android.net.Uri u = in == null ? null : in.getData();
+        if (u == null || !Session.SCHEME.equals(u.getScheme())) return false;
+        in.setData(null);
+        btnLogin.setEnabled(false);
+        showSigning(true);
+        new Thread(() -> {
+            try {
+                final String[] r = Session.finish(this, u);
+                saveRemember(r[0], "", r[1]);
+                runOnUiThread(() -> {
+                    startActivity(new Intent(this, MainActivity.class).putExtra("signedIn", true));
+                    finish();
+                });
+            } catch (Exception e) {
+                final String msg = "Couldn't finish signing in: " + e.getMessage();
+                runOnUiThread(() -> {
+                    btnLogin.setEnabled(true);
+                    showSigning(false);
+                    signInError(msg);
+                });
+            }
+        }).start();
+        return true;
     }
 
     void signInError(String msg) {

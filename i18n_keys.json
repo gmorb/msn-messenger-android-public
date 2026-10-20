@@ -159,5 +159,11 @@
  "Winks imported:",
  "MSN Messenger",
  "Add MSN Messenger to your Home screen with the original icon?",
- "The shortcut could not be added."
+ "The shortcut could not be added.",
+ "Sign in with %1$s",
+ "Sign in with your browser",
+ "Sign in with SSO",
+ "Couldn't open your browser.",
+ "Couldn't start signing in: %1$s",
+ "Couldn't finish signing in: %1$s"
 ]

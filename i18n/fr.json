@@ -177,5 +177,11 @@
  "Winks imported:": "Clins d'œil importés :",
  "MSN Messenger": "MSN Messenger",
  "Add MSN Messenger to your Home screen with the original icon?": "Ajouter MSN Messenger à l'écran d'accueil avec l'icône d'origine ?",
- "The shortcut could not be added.": "Le raccourci n'a pas pu être ajouté."
+ "The shortcut could not be added.": "Le raccourci n'a pas pu être ajouté.",
+ "Sign in with %1$s": "Se connecter avec %1$s",
+ "Sign in with your browser": "Se connecter avec le navigateur",
+ "Sign in with SSO": "Se connecter avec SSO",
+ "Couldn't open your browser.": "Impossible d'ouvrir le navigateur.",
+ "Couldn't start signing in: %1$s": "Impossible de commencer la connexion : %1$s",
+ "Couldn't finish signing in: %1$s": "Impossible de terminer la connexion : %1$s"
 }

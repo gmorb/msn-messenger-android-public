@@ -36,7 +36,7 @@ public class ChatActivity extends Activity {
     @Override
     protected void onCreate(Bundle b) {
         super.onCreate(b);
-        I18n.init(this);
+        I18n.init(this); Session.init(this);
         try {
             setContentView(R.layout.activity_chat);
             AssetStore.applyTags(findViewById(android.R.id.content));
@@ -299,7 +299,7 @@ public class ChatActivity extends Activity {
                 HttpURLConnection c = (HttpURLConnection) new URL(server.replaceAll("/$", "") + path).openConnection();
                 c.setRequestMethod(method);
                 c.setConnectTimeout(15000); c.setReadTimeout(60000);
-                c.setRequestProperty("Authorization", "Bearer " + token);
+                c.setRequestProperty("Authorization", Session.bearer(token));
                 if (data != null) { c.setRequestProperty("Content-Type", type); c.setDoOutput(true); c.getOutputStream().write(data); }
                 code = c.getResponseCode();
                 InputStream is = code < 400 ? c.getInputStream() : c.getErrorStream();
@@ -815,7 +815,7 @@ public class ChatActivity extends Activity {
                 String enc = URLEncoder.encode(roomId, "UTF-8");
                 String url = server.replaceAll("/$", "") + "/_matrix/client/v3/rooms/" + enc + "/messages?dir=b&limit=100";
                 HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
-                conn.setRequestProperty("Authorization", "Bearer " + token);
+                conn.setRequestProperty("Authorization", Session.bearer(token));
                 conn.setRequestMethod("GET");
 
                 if (conn.getResponseCode() == 200) {
@@ -901,7 +901,7 @@ public class ChatActivity extends Activity {
                     HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
                     conn.setConnectTimeout(15000);
                     conn.setReadTimeout(40000);
-                    conn.setRequestProperty("Authorization", "Bearer " + token);
+                    conn.setRequestProperty("Authorization", Session.bearer(token));
                     if (conn.getResponseCode() != 200) { conn.disconnect(); Thread.sleep(4000); continue; }
                     String t = new Scanner(conn.getInputStream(), "UTF-8").useDelimiter("\\A").next();
                     JSONObject j = new JSONObject(t);
@@ -1181,7 +1181,7 @@ public class ChatActivity extends Activity {
                 sentTxns.add(txn);
                 HttpURLConnection conn = (HttpURLConnection) new URL(server.replaceAll("/$", "") + "/_matrix/client/v3/rooms/" + enc + "/send/m.room.message/" + txn).openConnection();
                 conn.setRequestMethod("PUT");
-                conn.setRequestProperty("Authorization", "Bearer " + token);
+                conn.setRequestProperty("Authorization", Session.bearer(token));
                 conn.setRequestProperty("Content-Type", "application/json");
                 conn.setDoOutput(true);
                 conn.getOutputStream().write(body.toString().getBytes("UTF-8"));
@@ -1309,7 +1309,7 @@ public class ChatActivity extends Activity {
                         for (String u : new String[]{base + "/_matrix/client/v1/media/download/" + path, base + "/_matrix/media/v3/download/" + path}) {
                             HttpURLConnection c = (HttpURLConnection) new URL(u).openConnection();
                             c.setConnectTimeout(10000); c.setReadTimeout(30000);
-                            c.setRequestProperty("Authorization", "Bearer " + token);
+                            c.setRequestProperty("Authorization", Session.bearer(token));
                             if (c.getResponseCode() != 200) { c.disconnect(); continue; }
                             byte[] d = Avatars.readAll(c.getInputStream());
                             try (FileOutputStream o = new FileOutputStream(vf)) { o.write(d); }
@@ -1434,7 +1434,7 @@ public class ChatActivity extends Activity {
             HttpURLConnection conn = (HttpURLConnection) new URL(server.replaceAll("/+$", "") + "/_matrix/media/v3/upload?filename=" + URLEncoder.encode(name, "UTF-8")).openConnection();
             conn.setRequestMethod("POST"); conn.setDoOutput(true);
             conn.setConnectTimeout(15000); conn.setReadTimeout(60000);
-            conn.setRequestProperty("Authorization", "Bearer " + token);
+            conn.setRequestProperty("Authorization", Session.bearer(token));
             conn.setRequestProperty("Content-Type", mime);
             conn.getOutputStream().write(data);
             if (conn.getResponseCode() != 200) return null;
@@ -1511,7 +1511,7 @@ public class ChatActivity extends Activity {
                 body.put("body", text);
                 HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
                 conn.setRequestMethod("PUT");
-                conn.setRequestProperty("Authorization", "Bearer " + token);
+                conn.setRequestProperty("Authorization", Session.bearer(token));
                 conn.setRequestProperty("Content-Type", "application/json");
                 conn.setDoOutput(true);
                 conn.getOutputStream().write(body.toString().getBytes("UTF-8"));
